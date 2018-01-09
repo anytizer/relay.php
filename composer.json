@@ -1,0 +1,9 @@
+{
+    "name": "anytizer/relay.php",
+    "description": "cURL based HTTP Client",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+		"anytizer/spl_include.php": "dev-master"
+	}
+}
