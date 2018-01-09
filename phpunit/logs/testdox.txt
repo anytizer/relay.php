@@ -1,4 +1,3 @@
-relay1
- [ ] Create token
- [ ] Validate token
+relay
+ [x] Ip address from ipify
 

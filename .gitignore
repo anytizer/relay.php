@@ -1,3 +1,4 @@
-/src/.idea
 /phpunit/phpunit.phar
 /vendor/
+/out
+/*.lock

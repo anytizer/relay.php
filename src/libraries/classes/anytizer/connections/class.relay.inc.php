@@ -1,5 +1,5 @@
 <?php
-namespace common;
+namespace anytizer\connections;
 
 /**
  * Sends HTTP Requests via POST or GET combinations

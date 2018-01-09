@@ -1,11 +1,11 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use common\relay;
+use anytizer\connections\relay;
 
 /**
  * Generate and Use tokens before actual API is being accessed
  */
-class relay1Test extends TestCase
+class relayTest extends TestCase
 {
 	private $relay = null;
 
@@ -14,16 +14,24 @@ class relay1Test extends TestCase
 		$_GET = array();
 		$_POST = array();
 		$this->relay = new relay();
-		//$this->relay->log(true);
-	}
-
-	public function testCreateToken()
-	{
-		$this->markTestIncomplete();
 	}
 	
-	public function testValidateToken()
+	public function testIpAddressFromIpify()
 	{
-		$this->markTestIncomplete();
+		$_GET = array(
+			"format" => "json",
+		);
+		
+		/**
+		 * Courtesy
+		 */
+		$url = "https://api.ipify.org/";
+		
+		$relay = new relay();
+		$result = $relay->fetch($url);
+		$data = json_decode($result, true);
+		
+		$this->assertTrue(strlen($result) >= strlen("0.0.0.0"));
+		$this->assertArrayHasKey("ip", $data);
 	}
 }

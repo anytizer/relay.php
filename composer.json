@@ -4,6 +4,6 @@
     "type": "library",
     "license": "MIT",
     "require": {
-		"anytizer/spl_include.php": "dev-master"
+		"anytizer/includer.php": "dev-master"
 	}
 }

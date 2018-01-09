@@ -10,3 +10,8 @@ Simple cURL based HTTP Client that relays GET/POST data.
 	
 	$relay = new relay();
 	$result = $relay->fetch($url);
+
+
+## Installation
+
+	composer require anytizer/relay.php:dev-master
