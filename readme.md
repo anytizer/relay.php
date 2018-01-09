@@ -16,7 +16,6 @@ Simple cURL based HTTP Client that relays GET/POST data.
 
 	composer require anytizer/includer.php:dev-master
 	composer require anytizer/relay.php:dev-master
-	composer require --update-with-dependencies anytizer/relay.php:dev-master
 
 
 ## Third party

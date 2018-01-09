@@ -6,5 +6,10 @@
     "require": {
 		"anytizer/includer.php": "dev-master"
 	},
+	"autoload": {
+		"files": [
+			"src/libraries/classes/anytizer/connections/class.relay.inc.php"
+		]
+	},
 	"minimum-stability": "dev"
 }
