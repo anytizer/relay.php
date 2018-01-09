@@ -14,4 +14,11 @@ Simple cURL based HTTP Client that relays GET/POST data.
 
 ## Installation
 
+	composer require anytizer/includer.php:dev-master
 	composer require anytizer/relay.php:dev-master
+	composer require --update-with-dependencies anytizer/relay.php:dev-master
+
+
+## Third party
+
+ * Includes access to [ipify](https://www.ipify.org) for test purpose. [Project](https://github.com/rdegges/ipify-api)
