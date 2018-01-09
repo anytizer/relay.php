@@ -8,7 +8,7 @@
 	},
 	"autoload": {
 		"files": [
-			"src/libraries/classes/anytizer/connections/class.relay.inc.php"
+			"src/static.php"
 		]
 	},
 	"minimum-stability": "dev"
