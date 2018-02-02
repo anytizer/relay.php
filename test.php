@@ -2,14 +2,17 @@
 /**
  * Copy this file where your vendor/ is.
  */
-require_once("vendor/autoload.php");
+require_once "vendor/autoload.php";
 use anytizer\includer;
 
+/**
+ * Feature from includer.php to locate relay class.
+ */
 spl_autoload_register(array(new includer("src/libraries/classes"), "namespaced_inc_dot"));
 use anytizer\connections\relay;
 
 $_GET = array(
-	"format" => "json",
+    "format" => "json",
 );
 
 $_POST = array();
@@ -23,4 +26,7 @@ $relay = new relay();
 $result = $relay->fetch($url);
 $data = json_decode($result, true);
 
+/**
+ * Output the data fetched
+ */
 print_r($data);
