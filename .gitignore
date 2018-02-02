@@ -1,5 +1,7 @@
+.idea/
+/*.lock
+/out
+/phpunit/logs/testdox.txt
 /phpunit/phpunit.phar
 /vendor/
-/out
-/*.lock
-/phpunit/logs/testdox.txt
+nbproject/

@@ -24,14 +24,19 @@ class relayTest extends TestCase
 		
 		/**
 		 * Courtesy
+		 * @see https://www.ipify.org/
 		 */
 		$url = "https://api.ipify.org/";
 		
 		$relay = new relay();
 		$result = $relay->fetch($url);
+
 		$data = json_decode($result, true);
+		$ip = $data["ip"];
 		
-		$this->assertTrue(strlen($result) >= strlen("0.0.0.0"));
 		$this->assertArrayHasKey("ip", $data);
+		
+		$this->assertTrue(strlen($ip) >= strlen("0.0.0.0"));
+		$this->assertTrue(strlen($ip) <= strlen("0000:0000:0000:0000:0000:0000:0000:0000"));
 	}
 }
