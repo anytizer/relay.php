@@ -1,6 +1,6 @@
 {
     "name": "anytizer/relay.php",
-    "description": "cURL based HTTP Client",
+    "description": "cURL based HTTP(s) Client",
     "type": "library",
     "license": "MIT",
     "require": {
@@ -10,6 +10,5 @@
 		"files": [
 			"src/static.php"
 		]
-	},
-	"minimum-stability": "dev"
+	}
 }

@@ -2,3 +2,4 @@
 /vendor/
 /out
 /*.lock
+/phpunit/logs/testdox.txt
