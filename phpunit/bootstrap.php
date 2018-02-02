@@ -3,8 +3,7 @@ declare(strict_types=1);
 
 namespace tests;
 
-require_once("../vendor/autoload.php");
-#require_once("../vendor/anytizer/includer.php/src/libraries/classes/anytizer/class.includer.inc.php");
+require_once "../vendor/autoload.php";
 
 use anytizer\includer;
 
