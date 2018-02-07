@@ -6,7 +6,7 @@ Simple cURL based HTTP Client that relays GET/POST data.
 ## Usage
 
     <?php
-    namespace anytizer\connections;
+    use anytizer\connections\relay;
 
     $_GET = array();
     $_POST = array();

@@ -8,7 +8,8 @@ use anytizer\includer;
 /**
  * Feature from includer.php to locate relay class.
  */
-spl_autoload_register(array(new includer("src/libraries/classes"), "namespaced_inc_dot"));
+$path = dirname(__FILE__)."/src/libraries/classes";
+spl_autoload_register(array(new includer($path), "namespaced_inc_dot"));
 use anytizer\connections\relay;
 
 $_GET = array(
