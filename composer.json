@@ -3,12 +3,9 @@
     "description": "cURL based HTTP(s) Client",
     "type": "library",
     "license": "MIT",
-    "require": {
-		"anytizer/includer.php": "dev-master"
-	},
 	"autoload": {
-		"files": [
-			"src/libraries/classes/anytizer/connections/class.relay.inc.php"
-		  ]
+		"psr-4": {
+			"anytizer\\connection\\": "src/libraries/classes/anytizer/connections"
+		}
 	}
 }
