@@ -1,0 +1,80 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4ad5a45404955f98582d3bda7e56ce6b",
+    "packages": [
+        {
+            "name": "anytizer/includer.php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anytizer/includer.php.git",
+                "reference": "5e58dbbd787738dc9287fcffa020b7d874909c93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anytizer/includer.php/zipball/5e58dbbd787738dc9287fcffa020b7d874909c93",
+                "reference": "5e58dbbd787738dc9287fcffa020b7d874909c93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/libraries/classes/anytizer/class.includer.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Custom SPL autoload registration",
+            "keywords": [
+                "autoload",
+                "includer",
+                "spl"
+            ],
+            "time": "2018-02-02T16:10:02+00:00"
+        },
+        {
+            "name": "anytizer/relay.php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anytizer/relay.php.git",
+                "reference": "fe960c7cd1874e53890108cf7ad75215a698fbbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anytizer/relay.php/zipball/fe960c7cd1874e53890108cf7ad75215a698fbbe",
+                "reference": "fe960c7cd1874e53890108cf7ad75215a698fbbe",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "anytizer\\connections\\": "src/libraries/classes/anytizer/connections"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "cURL based HTTP(s) Client",
+            "time": "2018-03-09T03:03:13+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "anytizer/relay.php": 20,
+        "anytizer/includer.php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,12 +1,12 @@
 # relay.php
 
-Simple cURL based HTTP Client that relays GET/POST data.
+Simple cURL based HTTP Client that __relays__ GET/POST data.
 
 
 ## Usage
 
     <?php
-    use anytizer\connections\relay;
+    use anytizer\relay;
 
     $_GET = array();
     $_POST = array();

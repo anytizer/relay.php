@@ -5,7 +5,7 @@
     "license": "MIT",
 	"autoload": {
 		"psr-4": {
-			"anytizer\\": "src/libraries/classes/anytizer"
+			"anytizer\\": "src/anytizer"
 		}
 	}
 }

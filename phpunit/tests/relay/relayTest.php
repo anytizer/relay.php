@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use anytizer\connections\relay;
+use anytizer\relay;
 
 /**
  * Generate and Use tokens before actual API is being accessed
@@ -23,7 +23,7 @@ class relayTest extends TestCase
 		);
 		
 		/**
-		 * Courtesy
+		 * Courtesy use
 		 * @see https://www.ipify.org/
 		 */
 		$url = "https://api.ipify.org/";
@@ -36,7 +36,10 @@ class relayTest extends TestCase
 		
 		$this->assertArrayHasKey("ip", $data);
 		
-		$this->assertTrue(strlen($ip) >= strlen("0.0.0.0"));
-		$this->assertTrue(strlen($ip) <= strlen("0000:0000:0000:0000:0000:0000:0000:0000"));
+		$ipv4 = "0.0.0.0";
+		$ipv6 = "0000:0000:0000:0000:0000:0000:0000:0000";
+		
+		$this->assertTrue(strlen($ip) >= strlen($ipv4));
+		$this->assertTrue(strlen($ip) <= strlen($ipv6));
 	}
 }
