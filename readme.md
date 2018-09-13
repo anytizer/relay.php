@@ -17,10 +17,10 @@ Simple cURL based HTTP Client that __relays__ GET/POST data.
 
 ## Installation
 
-    composer require anytizer/includer.php:dev-master
+    composer global require anytizer/relay.php:dev-master
     composer require anytizer/relay.php:dev-master
 
 
 ## Third party
 
- * Includes access to [ipify](https://www.ipify.org/) for test purpose. [Project](https://github.com/rdegges/ipify-api/)
+ * Includes access to [ipify](https://www.ipify.org/) ([project](https://github.com/rdegges/ipify-api/)) for test purpose.
