@@ -2,6 +2,9 @@
 use PHPUnit\Framework\TestCase;
 use anytizer\relay;
 
+/**
+ * Service not functional
+ */
 class mockbinTest extends TestCase
 {
 	private $relay = null;
@@ -13,7 +16,7 @@ class mockbinTest extends TestCase
 		$this->relay = new relay();
 	}
 	
-	public function _testMockbinTest()
+	public function testMockBin()
 	{
 		$_GET = array(
 			"format" => "json",
@@ -32,9 +35,12 @@ class mockbinTest extends TestCase
 		 * Create an endpoint first
 		 * @see http://mockbin.org
 		 */
-		$url = "http://mockbin.org/bin/A06CABA4-C11F-4EC2-91B5-5CF259D4968E/view";
+		$guid = "DB450EE1-D282-47B0-8565-1131E48792E8";
+		$url = "http://mockbin.org/bin/{$guid}/view";
 		
 		$relay = new relay($headers);
 		$result = $relay->fetch($url);
+		
+		$this->markTestIncomplete();
 	}
 }

@@ -36,8 +36,8 @@ class relayTest extends TestCase
 		
 		$this->assertArrayHasKey("ip", $data);
 		
-		$ipv4 = "0.0.0.0";
-		$ipv6 = "0000:0000:0000:0000:0000:0000:0000:0000";
+		$ipv4 = "0.0.0.0"; // compose with single digit
+		$ipv6 = "0000:0000:0000:0000:0000:0000:0000:0000"; // compose with 4 digits
 		
 		$this->assertTrue(strlen($ip) >= strlen($ipv4));
 		$this->assertTrue(strlen($ip) <= strlen($ipv6));

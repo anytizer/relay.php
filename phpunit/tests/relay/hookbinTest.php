@@ -2,6 +2,9 @@
 use PHPUnit\Framework\TestCase;
 use anytizer\relay;
 
+/**
+ * Service not functional
+ */
 class hookbinTest extends TestCase
 {
 	private $relay = null;
@@ -13,7 +16,7 @@ class hookbinTest extends TestCase
 		$this->relay = new relay();
 	}
 	
-	public function _testHookBin()
+	public function testHookBin()
 	{
 		$_GET = array(
 			"format" => "json",
@@ -32,5 +35,7 @@ class hookbinTest extends TestCase
 		
 		$relay = new relay();
 		$result = $relay->fetch($url);
+		
+		$this->markTestIncomplete();
 	}
 }
