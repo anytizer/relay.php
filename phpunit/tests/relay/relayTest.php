@@ -7,13 +7,10 @@ use anytizer\relay;
  */
 class relayTest extends TestCase
 {
-	private $relay = null;
-
 	public function setup()
 	{
 		$_GET = array();
 		$_POST = array();
-		$this->relay = new relay();
 	}
 	
 	public function testIpAddressFromIpify()
