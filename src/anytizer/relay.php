@@ -22,6 +22,14 @@ class relay
 		
 		$this->refill();
 	}
+        
+        /**
+         * Force POST
+         */
+        public function force_post()
+        {
+            $this->method = "post";
+        }
 	
 	/**
 	 * Fills any missing SERVER and HEADER values
