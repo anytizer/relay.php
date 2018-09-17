@@ -10,6 +10,12 @@ class relay
 	private $post;
 	
 	private $method; // get, post, undefined = get
+        
+        /**
+         * Custom headers passed programatically
+         * @var type array
+         */
+        private $custom_headers = array();
 	
 	public function __construct()
 	{
@@ -24,11 +30,24 @@ class relay
 	}
         
         /**
-         * Force POST
+         * Force POST method
          */
         public function force_post()
         {
             $this->method = "post";
+        }
+        
+        /**
+         * cURL HTTP Headers only
+         * @param type $headers
+         */
+        public function headers($headers = array())
+        {
+            $this->custom_headers = array();
+            foreach($headers as $h => $header)
+            {
+                $this->custom_headers[$h] = $header;
+            }
         }
 	
 	/**
@@ -196,6 +215,13 @@ class relay
 		curl_setopt($ch, CURLOPT_TIMEOUT, 50);
 		curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
 		curl_setopt($ch, CURLOPT_VERBOSE, false);
+                
+                foreach($this->custom_headers as $h => $header)
+                {
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                        "{$h}: {$header}",
+                    ));
+                }
 		
 # // https://lornajane.net/posts/2011/posting-json-data-with-php-curl
 # curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
@@ -214,6 +240,7 @@ class relay
 			$error_message = curl_strerror($errno);
 			/**
 			 * @todo Log the error
+			 * @todo Use exception
 			 */
 			echo "cURL error ({$errno}):\n {$error_message}";
 		}
