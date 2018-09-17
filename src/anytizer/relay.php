@@ -17,6 +17,9 @@ class relay
          */
         private $custom_headers = array();
 	
+        /**
+         * @todo Intake array of custom headers
+         */
 	public function __construct()
 	{
 		/**
@@ -44,9 +47,9 @@ class relay
         public function headers($headers = array())
         {
             $this->custom_headers = array();
-            foreach($headers as $h => $header)
+            foreach($headers as $header_name => $header_value)
             {
-                $this->custom_headers[$h] = $header;
+                $this->custom_headers["{$header_name}"] = "{$header_value}";
             }
         }
 	
@@ -216,10 +219,10 @@ class relay
 		curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
 		curl_setopt($ch, CURLOPT_VERBOSE, false);
                 
-                foreach($this->custom_headers as $h => $header)
+                foreach($this->custom_headers as $header_name => $header_value)
                 {
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                        "{$h}: {$header}",
+                        "{$header_name}: {$header_value}",
                     ));
                 }
 		
