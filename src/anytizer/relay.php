@@ -49,6 +49,7 @@ class relay
             $this->custom_headers = array();
             foreach($headers as $header_name => $header_value)
             {
+				$header_name = strtoupper($header_name);
                 $this->custom_headers["{$header_name}"] = "{$header_value}";
             }
         }
