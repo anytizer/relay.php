@@ -49,8 +49,10 @@ class relay
             $this->custom_headers = array();
             foreach($headers as $header_name => $header_value)
             {
-				$header_name = strtoupper($header_name);
-                $this->custom_headers["{$header_name}"] = "{$header_value}";
+				if($header_name)
+				{
+					$this->custom_headers["{$header_name}"] = "{$header_value}";
+				}
             }
         }
 	
@@ -219,13 +221,16 @@ class relay
 		curl_setopt($ch, CURLOPT_TIMEOUT, 50);
 		curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
 		curl_setopt($ch, CURLOPT_VERBOSE, false);
-                
-                foreach($this->custom_headers as $header_name => $header_value)
-                {
-                    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                        "{$header_name}: {$header_value}",
-                    ));
-                }
+        
+		$custom_headers = array();
+		foreach($this->custom_headers as $header_name => $header_value)
+		{
+			$custom_headers[] = "{$header_name}: {$header_value}";
+		}
+		if(count($custom_headers))
+		{
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $custom_headers);
+		}
 		
 # // https://lornajane.net/posts/2011/posting-json-data-with-php-curl
 # curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
