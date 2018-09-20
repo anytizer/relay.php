@@ -12,14 +12,14 @@ class relayCustomHeaderTest extends TestCase
 		$_GET = array();
 		$_POST = array();
 	}
-	
-	/**
-	 * @todo Incomplete
-	 */
+
 	public function testCustomHeader()
 	{
 		/**
 		 * URL that verifies the header
+		 * Copy web/custom-headers.php into localhost.
+		 *
+		 * @see web/custom-headers.php
 		 */
 		$url = "http://localhost/custom-headers.php";
 		

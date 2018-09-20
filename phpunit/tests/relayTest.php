@@ -20,7 +20,7 @@ class relayTest extends TestCase
 		);
 		
 		/**
-		 * Courtesy use
+		 * Courtesy use only
 		 * @see https://www.ipify.org/
 		 */
 		$url = "https://api.ipify.org/";
