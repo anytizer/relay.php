@@ -2,7 +2,7 @@ const https = require("https");
 
 const data = JSON.stringify({
     name: "John"
-})
+});
 
 const options = {
     hostname: "hookb.in",
@@ -10,10 +10,10 @@ const options = {
     path: "/xxxxxxxxxxxxxx",
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "Content-Length": data.length
+        "Content-Type": "application/json",
+        "Content-Length": data.length
     }
-}
+};
 
 const req = https.request(options, (res) => {
     console.log(`status: ${res.statusCode}`);

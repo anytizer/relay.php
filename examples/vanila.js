@@ -10,7 +10,7 @@ xhr.onreadystatechange = function () {
     }
 };
 
-var data = JSON.stringify({
+const data = JSON.stringify({
     "name": "John"
 });
 
