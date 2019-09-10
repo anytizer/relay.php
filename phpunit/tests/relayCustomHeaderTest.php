@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
  */
 class relayCustomHeaderTest extends TestCase
 {
-    public function setup()
+    public function setup(): void
     {
         $_GET = array();
         $_POST = array();

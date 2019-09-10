@@ -7,3 +7,4 @@
 nbproject/
 /test/vendor
 /tests.remote/vendor
+/phpunit/.phpunit.result.cache

@@ -10,7 +10,7 @@ class mockbinTest extends TestCase
 {
     private $relay = null;
 
-    public function setup()
+    public function setup(): void
     {
         $_GET = array();
         $_POST = array();
