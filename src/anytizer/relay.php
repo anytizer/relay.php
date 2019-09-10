@@ -17,7 +17,7 @@ class relay
      *
      * @var array
      */
-    private $custom_headers = array();
+    private $custom_headers = [];
 
     /**
      * @todo Intake array of custom headers
@@ -81,9 +81,9 @@ class relay
      *
      * @param array $headers
      */
-    public function headers($headers = array())
+    public function headers($headers = [])
     {
-        $this->custom_headers = array();
+        $this->custom_headers = [];
         foreach ($headers as $header_name => $header_value) {
             if ($header_name) {
                 $this->custom_headers["{$header_name}"] = "{$header_value}";
@@ -154,19 +154,13 @@ class relay
         curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
         curl_setopt($ch, CURLOPT_VERBOSE, false);
 
-        $custom_headers = array();
+        $custom_headers = [];
         foreach ($this->custom_headers as $header_name => $header_value) {
             $custom_headers[] = "{$header_name}: {$header_value}";
         }
         if (count($custom_headers)) {
             curl_setopt($ch, CURLOPT_HTTPHEADER, $custom_headers);
         }
-
-# // https://lornajane.net/posts/2011/posting-json-data-with-php-curl
-# curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-# 	"Content-Type: application/json",
-# 	"Content-Length: " . strlen($data_string))
-# );
 
         /**
          * @todo Fix the file path in settings
@@ -194,7 +188,7 @@ class relay
      * @todo URL may contain $_GET variables
      *
      */
-    private function parse_merge($url = "") // , $data=array())
+    private function parse_merge($url = "") // , $data=[])
     {
         $chunks = parse_url($url);
         #print_r($chunks);
@@ -213,7 +207,7 @@ class relay
         $chunks["pass"] = ($chunks["user"] || $chunks["pass"]) ? ":{$chunks["pass"]}" : "";
         $chunks["port"] = empty($chunks["port"]) ? "" : ":{$chunks["port"]}";
 
-        $queries = array();
+        $queries = [];
         parse_str($chunks["query"], $queries);
         #print_r($queries);
         #print_r(func_get_args());
