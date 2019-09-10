@@ -8,14 +8,20 @@ Simple cURL based HTTP Client that __relays__ GET/POST data.
     <?php
     use anytizer\relay;
 
-    $_GET = array();
-    $_POST = array();
+    // Fill up your data here
+    $_GET = [];
+    $_POST = [];
 
     $relay = new relay();
+    $relay->heders([
+        "X-Protection-Token" => "",
+    ]);
     $result = $relay->fetch($url);
 
 
 ## Installation
+
+Use one of the following:
 
     composer global require anytizer/relay.php:dev-master
     composer require anytizer/relay.php:dev-master
@@ -23,4 +29,4 @@ Simple cURL based HTTP Client that __relays__ GET/POST data.
 
 ## Third party
 
- * Includes access to [ipify](https://www.ipify.org/) ([project](https://github.com/rdegges/ipify-api/)) for test purpose.
+ * Includes access to [ipify](https://www.ipify.org/) ([project](https://github.com/rdegges/ipify-api/)) and [hookbin](https://hookbin.com/) for test purpose.
