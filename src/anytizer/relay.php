@@ -135,8 +135,6 @@ class relay
         } else if ($method == "get" || true) {
             curl_setopt($ch, CURLOPT_HTTPGET, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-        } else {
-            // undetermined = get
         }
 
         /**
@@ -191,10 +189,10 @@ class relay
     }
 
     /**
-     * @todo URL may contain $_GET variables
-     *
      * @param string $url
      * @return string
+     * @todo URL may contain $_GET variables
+     *
      */
     private function parse_merge($url = "") // , $data=array())
     {
@@ -260,7 +258,6 @@ class relay
      */
     public function post($url = "")
     {
-        // fetch with post only
         $this->method = "post";
 
         return $this->fetch($url);
