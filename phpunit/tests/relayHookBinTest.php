@@ -14,7 +14,7 @@ class relayHookBinTest extends TestCase
         $_POST = array();
     }
 
-    public function testHoookBinCalled()
+    public function testHookBinCalled()
     {
         $_GET = array(
             "format" => "json",
