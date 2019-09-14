@@ -86,6 +86,9 @@ class relay
         $this->custom_headers = [];
         foreach ($headers as $header_name => $header_value) {
             if ($header_name) {
+                /**
+                 * Force convert to string
+                 */
                 $this->custom_headers["{$header_name}"] = "{$header_value}";
             }
         }
