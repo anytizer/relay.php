@@ -8,7 +8,7 @@ Simple cURL based HTTP Client that __relays__ GET/POST data.
     <?php
     use anytizer\relay;
 
-    // Fill up your data here
+    // Fill up your data here, yes: super globals.
     $_GET = [];
     $_POST = [];
 
