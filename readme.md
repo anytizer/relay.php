@@ -23,8 +23,8 @@ Simple cURL based HTTP Client that __relays__ GET/POST data.
 
 Use one of the following:
 
-    composer global require anytizer/relay.php:dev-master
-    composer require anytizer/relay.php:dev-master
+    composer global require anytizer/relay.php=dev-master
+    composer require anytizer/relay.php=dev-master
 
 
 ## Third party
