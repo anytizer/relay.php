@@ -13,7 +13,7 @@ Simple cURL based HTTP Client that __relays__ GET/POST data.
     $_POST = [];
 
     $relay = new relay();
-    $relay->heders([
+    $relay->headers([
         "X-Protection-Token" => "",
     ]);
     $result = $relay->fetch($url);
