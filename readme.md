@@ -29,4 +29,4 @@ Use one of the following:
 
 ## Third party
 
- * Includes access to [ipify](https://www.ipify.org/) ([project](https://github.com/rdegges/ipify-api/)) and [hookbin](https://hookbin.com/) for test purpose.
+ * Links to [ipify](https://www.ipify.org/) ([project](https://github.com/rdegges/ipify-api/)) and [hookbin](https://hookbin.com/) for test purpose.
